@@ -1,8 +1,8 @@
 [build]
   base = "frontend/"
-  publish = "dist" # CORRECTED: Changed from "frontend/dist" to "dist"
-  installCommand = "npm install" # Explicit install command
-  buildCommand = "npm run build" # Explicit build command
+  publish = "dist"
+  installCommand = "npm install"
+  buildCommand = "./node_modules/.bin/vite build" # Explicitly call vite build from its local path
 
 [[headers]]
   for = "/*.js"
