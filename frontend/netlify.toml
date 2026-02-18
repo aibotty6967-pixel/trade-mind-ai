@@ -1,0 +1,9 @@
+[[headers]]
+for = "/*.js"
+[headers.values]
+Content-Type = "application/javascript"
+
+[[headers]]
+for = "/index.html"
+[headers.values]
+Cache-Control = "no-cache" # Prevent caching issues during development/debug
