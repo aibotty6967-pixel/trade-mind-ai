@@ -1,7 +1,8 @@
 [build]
   base = "frontend/"
-  publish = "frontend/dist"
-  command = "npm install && npm run build"
+  publish = "dist" # CORRECTED: Changed from "frontend/dist" to "dist"
+  installCommand = "npm install" # Explicit install command
+  buildCommand = "npm run build" # Explicit build command
 
 [[headers]]
   for = "/*.js"
