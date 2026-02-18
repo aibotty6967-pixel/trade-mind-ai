@@ -1,9 +1,14 @@
-[[headers]]
-for = "/*.js"
-[headers.values]
-Content-Type = "application/javascript"
+[build]
+  base = "frontend/"
+  publish = "frontend/dist"
+  command = "npm install && npm run build"
 
 [[headers]]
-for = "/index.html"
-[headers.values]
-Cache-Control = "no-cache" # Prevent caching issues during development/debug
+  for = "/*.js"
+  [headers.values]
+    Content-Type = "application/javascript"
+
+[[headers]]
+  for = "/index.html"
+  [headers.values]
+    Cache-Control = "no-cache"
