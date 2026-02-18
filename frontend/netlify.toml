@@ -1,8 +1,8 @@
 [build]
-  base = "frontend/"
-  publish = "dist"
-  installCommand = "npm install"
-  buildCommand = "./node_modules/.bin/vite build" # Explicitly call vite build from its local path
+  # No 'base' property here. Commands will run from the repository root.
+  publish = "frontend/dist" # This is where Netlify will find the final build output.
+  installCommand = "cd frontend && npm install" # Change to frontend, then install.
+  buildCommand = "cd frontend && npm run build" # Change to frontend, then run the build script.
 
 [[headers]]
   for = "/*.js"
