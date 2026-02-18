@@ -1,6 +1,12 @@
 {
-  "buildCommand": "npm run build --prefix frontend",
-  "installCommand": "npm install --prefix frontend",
-  "outputDirectory": "frontend/dist",
-  "framework": "vite"
+  "projects": [
+    {
+      "name": "trade-mind-frontend",
+      "rootDirectory": "frontend",
+      "framework": "vite",
+      "buildCommand": "npm run build",
+      "installCommand": "npm install",
+      "outputDirectory": "dist"
+    }
+  ]
 }
